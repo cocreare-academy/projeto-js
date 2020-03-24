@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            Titulo
+        </title>
+    </head>
+    <body>
+        <!-- <div class="classe" onmouseover="alert('oi');"> -->
+        <div class="classe">
+            Absolutamente nada
+        </div>
+        <div class="auxiliar" id="demo">
+            Numero de vezes clicadas: <span>0</span>
+        </div>
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+                }
+            };
+            xhttp.open("GET", "conteudo.html", true);
+            xhttp.send();
+            
+            // Manipulação de eventos customizados
+            // let elementoDiv = document.querySelector('div.classe');
+            // let elementoAuxiliar = document.querySelector('div.auxiliar');
+            
+            // let evento = new Event('incremento');
+
+            // elementoAuxiliar.addEventListener('incremento', function(e){
+            //     console.log(e)
+            //     elementoAuxiliar.querySelector('span').innerHTML = numeroDeCliques;
+            // })
+
+            // let numeroDeCliques = 0;
+            // elementoDiv.addEventListener('click', function(){
+            //     numeroDeCliques++
+            //     elementoAuxiliar.dispatchEvent(evento)
+            // })
+
+
+            // Adicionar listener padrão
+            // let elementoDiv = document.querySelector('div.classe');
+            // let numeroDeCliques = 0;
+            // elementoDiv.addEventListener('click', function(){
+            //     numeroDeCliques++
+            //     console.log('Obrigado por clicar na minha div', 'Você já clicou '+numeroDeCliques+' vezes');
+            // })
+
+            // Manipular DOM pelo javascript
+            // let numero = 0;
+            // let elementoDiv = document.querySelector('div.classe');
+            // console.log(elementoDiv);
+            // elementoDiv.innerHTML = "Alguma coisa";
+            // let elementoSpan = document.createElement('span');
+            // elementoDiv.prepend(elementoSpan)
+            // elementoSpan.innerHTML="conteudo qualquer"
+
+            //Controlar debug pelo chrome
+            // for (let i = 0; i < 10; i++) {
+            //     numero += 1;
+            //     numero++;
+            //     numero = numero*2;
+            //     console.log('Oi, o numero vale ' + numero);
+            // }
+        </script>
+    </body>
+</html>
